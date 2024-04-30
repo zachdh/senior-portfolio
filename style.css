@@ -10,7 +10,7 @@
     line-height: normal;
     color: black;
     justify-content: right;
-    margin-right: 5%;
+    padding-right: 5%;
     
 }
 
@@ -20,8 +20,8 @@
 }
 
 .nav-link a {
-    text-decoration: underline;
-    color: black;
+    text-decoration: none;
+    color: #595959;
 }
 
 .nav-link a:hover {
@@ -68,13 +68,24 @@
     padding-bottom: 5%;
     padding-top: 5%;
     width: 754px;
-    height: 150px;
+    height: 300px;
 
     color: #030303;
     font-family: "Libre Baskerville";
     font-size: 20px; 
     font-weight: lighter;
     line-height: normal;
+}
+
+.profile-img{
+    border-radius: 50%;
+    max-width: 100%;
+    max-height: 100%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    border-style: solid;
+    border-color: yellow;
+    border-width: 3px;
 }
 
 
@@ -112,6 +123,9 @@
     height: 195px;
     transition: transform 0.3s ease-in-out; /* Adding a smooth transition effect */
     cursor: pointer; /* Changing cursor to a hand */
+    border-style: solid;
+    border-color: black;
+    border-width: 3px;
 }
 
 .project-img:hover {
@@ -120,7 +134,7 @@
 
 .project-title{
     margin-bottom: 0;
-    color: #030303;
+    color: green;
     font-family: "Libre Baskerville";
     font-size: 30px;
     font-style: normal;
