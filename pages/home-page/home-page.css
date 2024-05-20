@@ -1,9 +1,16 @@
 
+* {
+    box-sizing: border-box;
+}
+body {
+    background: #eceef1;
+}
+
 .nav-bar {
     display: flex;
     flex-direction: row;
     padding-top: 20px;
-    font-family: "Libre Baskerville";
+    font-family: "Lato";
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
@@ -42,7 +49,7 @@
 
   /* Links inside the dropdown */
 .dropdown-content a {
-    font-family: "Libre Baskerville";
+    font-family: "Lato";
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
@@ -59,35 +66,116 @@
   /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {display: block;}
 
-
-.home-header {
+.home-title{
+    display: flex;
     justify-content: center;
     text-align: center;
-    align-items:center;
-    margin:auto;
-    padding-bottom: 5%;
     padding-top: 5%;
-    width: 754px;
-    height: 300px;
+    padding-bottom: 5%;
+    padding-right: 22%;
+
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+#title{
+    margin:0;
+}
+
+.home-header {
+    display:flex;
+    flex-direction: row;
+    width: 50%;
+    height: 50vh
+}
+
+.home-desc{
+    width: 60%;
+    margin: auto;
 
     color: #030303;
-    font-family: "Libre Baskerville";
+    font-family: "Lato";
     font-size: 20px; 
-    font-weight: lighter;
     line-height: normal;
 }
 
-.profile-img{
-    border-radius: 50%;
-    max-width: 100%;
-    max-height: 100%;
-    margin-bottom: 5%;
-    margin-top: 5%;
-    border-style: solid;
-    border-color: yellow;
-    border-width: 3px;
-}
-
+/* Adding amorphous movement to profile picture */
+.container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .box {
+    width: 90vmin;
+    height: 90vmin;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      border-radius: 50%;
+      transform: scale(1.42);
+    }
+  }
+  .spin-container {
+    width: 100%;
+    height: 100%; /* animation: spin 12s linear infinite; */
+    position: relative;
+  }
+  .shape {
+    width: 100%;
+    height: 100%;
+    transition: border-radius 1s ease-out;
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    animation: morph 4s ease-in-out infinite both alternate;
+    position: absolute;
+    overflow: hidden;
+    z-index: 5;
+  }
+  .bd:before {
+    content: "";
+    position: relative;
+    
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  .bd {
+    width: 142%;
+    height: 142%;
+    position: relative;
+    left: -21%;
+    top: -21%;
+    background-image: url("./home-page-assets/profile-picture.png");
+    background-size: 100%;
+    background-position: center center;
+    display: flex;    
+    font-size: 5vw;
+    align-items: center;
+    justify-content: center;
+    text-align: center; 
+    z-index: 2;
+  }
+  @keyframes morph {
+    0% {
+      border-radius: 40% 60% 60% 40% / 60% 30% 70% 40%;
+    }
+    100% {
+      border-radius: 40% 60%;
+    }
+  }
+  @keyframes spin {
+    to {
+      transform: rotate(1turn);
+    }
+  }
+  
 
 
 .project-grid {
@@ -96,20 +184,22 @@
     margin: auto;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .project-row {
     display: flex;
     flex-direction: row;
+    gap: 50px;
 }
 
 .project-container {
     width: 494px;
-    padding-right: 5%;
     margin-bottom: 3%;
 }
 
 .project-inner-container {
+
     width: 494px;
     height: 300px;
     display:flex;
@@ -135,7 +225,7 @@
 .project-title{
     margin-bottom: 0;
     color: green;
-    font-family: "Libre Baskerville";
+    font-family: "Lato";
     font-size: 30px;
     font-style: normal;
     font-weight: 700;
@@ -144,7 +234,7 @@
 
 .project-link {
     color: #030303;
-    font-family: "Libre Baskerville";
+    font-family: "Lato";
     font-size: 15px;
     font-style: normal;
     font-weight: 500;
@@ -156,7 +246,10 @@ margin-top: 0.5;
 color: #030303;
 }
 
-
+.project-desc {
+    margin-top: 0.5;
+    color: #030303;
+}
 
 
 
